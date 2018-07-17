@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Contact us</title>
+</head>
+<body>
+	<h1>Contact us</h1>
+
+	<form action="/search" method="get">
+		<input type="text" name="q">
+		<input type="submit" value="Search">
+	</form>
+	{% if errors %}
+	<ul>
+		{% for error in errors %}
+		<li>{{ error }}</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+</body>
+</html>

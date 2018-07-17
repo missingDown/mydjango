@@ -16,12 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from . import views
+# from . import views
+from books import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', views.hello),
-    path('time/', views.current_datetime),
-    path('time/plus/<int:offset>/', views.hours_head), # 这里的参数名要和引用的视图函数的参数名一致
-    path('book/', views.book_list)
+    # path('time/', views.current_datetime),
+    # path('time/plus/<int:offset>/', views.hours_head), # 这里的参数名要和引用的视图函数的参数名一致
+    path('test/', views.search_form),
+    path('search/', views.search),
+    path('contact/', views.contact),
+    path('image/', views.download_image),
+    path('image1/', views.download_image1),
+    path('image2/', views.download_image2),
+    path('json/', views.jsondata)
 ]
